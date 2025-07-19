@@ -31,13 +31,6 @@ HTML Parsing: goquery (jQuery-like syntax)
 
 CORS Support: rs/cors
 
-Project Structure
-
-data-drill/
-├── main.go         # Main file with the HTTP server and scraping logic
-├── go.mod          # Go module definition
-└── README.md       # You're reading it!
-
 Getting Started
 
 1. Clone the Repository
@@ -55,25 +48,6 @@ go run main.go
 
 The API will be live at: http://localhost:8080
 
-API Usage
-
-Endpoint
-
-GET /scrape?url=https://example.com
-
-Example Request
-
-curl "http://localhost:8080/scrape?url=https://example.com"
-
-Example Response
-
-{
-  "title": "Example Domain",
-  "meta_description": "This domain is for use in illustrative examples in documents.",
-  "headings": ["Example Domain"],
-  "paragraphs": ["This domain is for use in illustrative examples..."],
-  "links": ["https://www.iana.org/domains/example"]
-}
 
 Notes & Limitations
 
