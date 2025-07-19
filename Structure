@@ -1,0 +1,10 @@
+DataDrill
+-backend
+   --go.mod
+   --go.sum
+   --main.go
+-extension
+   --background.js
+   --popup.html
+   --manifest.json
+   --popup.js
