@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Website Scraper</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            width: 320px;
+            max-height: 600px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: #fff;
+            overflow-y: auto;
+        }
+
+        h3 {
+            color: #00ffff;
+            border-bottom: 2px solid #00ffff;
+            padding-bottom: 6px;
+            margin-top: 20px;
+        }
+
+        #url {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            background-color: #111;
+            color: #0ff;
+            font-size: 14px;
+            outline: none;
+            box-shadow: 0 0 6px #0ff;
+            margin-bottom: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #url:focus {
+            box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+        }
+
+        #fetch {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, #00ffff, #0099ff);
+            color: #000;
+            font-weight: 600;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 12px #00ffff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #fetch:hover {
+            background: linear-gradient(90deg, #00ccff, #00ffee);
+            box-shadow: 0 0 18px #00ffff;
+        }
+
+        #headingsContainer {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #1b1b1b;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        #headingsList {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #0ff;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        li {
+            margin: 4px 0;
+            font-size: 13px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #0ff;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="url" placeholder="Enter URL here">
+    <button id="fetch">Fetch Details</button>
+    <div id="headingsContainer">
+        <h3>Headings:</h3>
+        <ul id="headingsList"></ul>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
